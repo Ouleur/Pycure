@@ -1,14 +1,12 @@
 Metadata-Version: 1.1
 Name: pymcure
-Version: 0.0.1
+Version: 0.0.2
 Summary: UNKNOWN
 Home-page: https://github.com/Ouleur/Pymcure
 Author: Vianney ADOU
 Author-email: UNKNOWN
 License: UNKNOWN
-Description: # Pycure
-        Mercure protocol Python3 librairy
+Description: https://github.com/Ouleur/Pymcure
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
-Classifier: Operating System :: Os Independent
