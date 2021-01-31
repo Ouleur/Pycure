@@ -24,8 +24,8 @@ Et pour ce faire, il a fourni les classes Sync et Async.
 
 ```python
 import json
-from pymcure.publisher.sync import SyncPublisher
-from pymcure.message import Message
+from pymcure.client.publisher.sync import SyncPublisher
+from pymcure.client.message import Message
 
 data = json.dumps({'status': 'test'})
 msg = Message(['mytopicname'], data)
@@ -74,8 +74,8 @@ HEADER = {
 
 ```python
 import json
-from pymcure.publisher.asynch import AsyncPublisher
-from pymcure.message import Message
+from pymcure.client.publisher.asynch import AsyncPublisher
+from pymcure.client.message import Message
 
 data = json.dumps({'status': 'test'})
 msg = Message(['mytopicname'], data)
@@ -94,7 +94,7 @@ Pour consommer des messages, c'est aussi assez simple. car le consommateur court
 vous n'avez pas à vous en préoccuper, il vous suffit de lui passer une fonction de rappel:
 
 ```python
-from pymcure.consumer import Consumer
+from pymcure.client.consumer import Consumer
 
 def callback(message):
     print(message.data)

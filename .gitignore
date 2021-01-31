@@ -3,7 +3,5 @@
 /pymcure.egg-info
 pymcure_test_subscriber.py
 pymcure_test.py
-*/__pycache__
-*/*/__pycache__
-*/*/*/__pycache__
-*/*/*/*/__pycache__
+**/__pycache__
+**/tests

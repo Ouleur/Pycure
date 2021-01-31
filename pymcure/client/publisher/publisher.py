@@ -106,7 +106,6 @@ class Publisher(ABC):
         Return the headers needed by Mercure
         :return object
         """
-        print(self.mercure_jwt)
         return {
             'Authorization': 'Bearer {}'.format(self.mercure_jwt),
             'Content-Type': 'application/x-www-form-urlencoded'

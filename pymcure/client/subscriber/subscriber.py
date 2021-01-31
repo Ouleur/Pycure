@@ -29,7 +29,6 @@ class Subscriber(Thread):
         :return:
         """
         response = self._create_request()
-        # print(response.api)
         self.sse_client = sseclient.SSEClient(response)
         self.start()
     
@@ -37,7 +36,7 @@ class Subscriber(Thread):
         """
         Start the event listening
         """
-        for event in self.sse_client:
+        for event in self.sse_client.events():
             # Create a new message object for each new income message
             msg = Message(self.topics, event.data, message_id=event.id, event_type=event.event)
             self.callback(msg)
@@ -49,8 +48,7 @@ class Subscriber(Thread):
         :return requests.api: the response object
         """
         url = "{}?{}".format(self.mercure_hub, self._create_consumer_query_string())
-        print(url)
-        return url
+        return requests.get(url, stream=True)
 
     def _create_consumer_query_string(self):
         """
